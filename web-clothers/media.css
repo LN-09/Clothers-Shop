@@ -1,0 +1,63 @@
+/*====== Media Queries ====*/
+@media screen and (max-width:1000px) {
+    .cotainer:not(nav .container) {
+        grid-template-columns: 1fr;
+    }
+    .pagination-mobile {
+        display: block;
+    }
+    nav {
+        position: relative;
+        z-index: 1;
+    }
+    nav .menu-btn {
+        display: block;
+    }
+    .slider {
+        display: none;
+    }
+    nav ul, aside {
+        display: none;
+    }
+    aside {
+        order: 2;
+    }
+    .menu-btn, .menu-btn:hover {
+        background: none;
+    }
+    .menu {
+        left: initial;
+        right: -20em;
+    }
+    .menu-open {
+        left: initial;
+        right: 0;
+    }
+    .title {
+        font-size: 3.5em;
+    }
+}
+
+@media screen and (max-width:500px) {
+    html {
+        font-size: 14px;
+    }
+}
+@media screen and (max-width:400px) {
+    .header-bottom .container > div {
+        flex-direction: column;
+    }
+    .item-centered {
+        margin: 0;
+    }
+}
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-3em);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
